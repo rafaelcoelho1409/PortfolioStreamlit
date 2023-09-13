@@ -22,6 +22,19 @@ container1.markdown("""<div style='font-size:28px'>
                     &#8226 Actually working in one of the Big Four companies for over a year.<br><br>
         </div>""",
         unsafe_allow_html = True)
+main_areas = [
+    "Data Science",
+    "Data Engineering",
+    "Data Analytics",
+    "Machine Learning",
+    "Automation (RPA)",
+    "Artificial Intelligence",
+    "Computer Vision"
+]
+st.write("$$\\large{\\textbf{My areas of expertise}}$$")
+grid3 = grid(len(main_areas))
+for x in main_areas:
+    grid3.write("$$\\textbf{" + x + "}$$")
 cols = container1.columns(2)
 with cols[0]:
     st.markdown("""
@@ -104,7 +117,7 @@ with cols[0]:
         "$$\\textbf{Keras}$$",
         "$$\\textbf{Scikit-Learn}$$",
         "$$\\textbf{XGBoost}$$",
-        "$$\\textbf{Facebook Prophet}$$",
+        "$$\\textbf{Prophet}$$",
     ]):
         dsai_image.image(x[0])
         dsai_desc.caption(x[1])
