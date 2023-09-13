@@ -31,7 +31,7 @@ main_areas = [
     "Artificial Intelligence",
     "Computer Vision"
 ]
-st.write("$$\\large{\\textbf{My areas of expertise}}$$")
+st.latex("\\underline{\\large{\\textbf{My areas of expertise}}}")
 grid3 = grid(len(main_areas))
 for x in main_areas:
     grid3.write("$$\\textbf{" + x + "}$$")
