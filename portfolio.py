@@ -34,7 +34,7 @@ main_areas = [
 st.latex("\\underline{\\large{\\textbf{My areas of expertise}}}")
 grid3 = grid(len(main_areas))
 for x in main_areas:
-    grid3.write("$$\\textbf{" + x + "}$$")
+    grid3.markdown(f"#### **{x}**")
 cols = container1.columns(2)
 with cols[0]:
     st.markdown("""
