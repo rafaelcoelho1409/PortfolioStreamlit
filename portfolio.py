@@ -6,13 +6,14 @@ st.set_page_config(
     layout = "wide"
 )
 
-st.latex("\\Huge{\\underline{\\textbf{Rafael Silva Coelho - PORTFOLIO}}}")
+st.markdown("<h1 style='text-align:center'><u>Rafael Silva Coelho - PORTFOLIO</u></h1>",
+            unsafe_allow_html = True)
 
 grid1 = grid([4, 1], vertical_align = True)
 container1 = grid1.container()
 container2 = grid1.container()
 container2.image("rafael_coelho_photo.jpeg")
-container1.markdown("""<div style='font-size:28px'>
+container1.markdown("""<div style='font-size:25px'>
                     &#8226 Data Scientist and AI Engineer with over 3 years of experience in the industry.<br>
                     &#8226 Highly proficient in Data Science, Machine Learning, 
                     Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Engineering.<br>
@@ -94,15 +95,16 @@ with st.expander(
 st.divider()
 cols = st.columns(2)
 with cols[0]:
-    st.latex("\\Huge{\\textbf{Tech Stack / Skills}}")
-    st.write("$$\\Large{\\underline{\\textbf{Languages}}}$$")
+    st.markdown("<h2 style='text-align:center'>Tech Stack / Skills</h2>",
+                unsafe_allow_html = True)
+    st.markdown("<h2><u>Languages</u></h2>", unsafe_allow_html = True)
     languages_image = grid(6)
     languages_desc = grid(6)
     languages_image.image(
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
     )
-    languages_desc.caption("$$\\textbf{Python}$$")
-    st.write("$$\\Large{\\underline{\\textbf{Artificial Intelligence / Machine Learning}}}$$")
+    languages_desc.caption("Python")
+    st.markdown("<h2><u>Artificial Intelligence / Machine Learning</u></h2>", unsafe_allow_html = True)
     dsai_image = grid(6)
     dsai_desc = grid(6)
     for x in zip([
@@ -113,12 +115,12 @@ with cols[0]:
         "https://miro.medium.com/v2/resize:fit:720/1*yhE3CBwTrlXcAIvNJNTQiA.png",
         "https://cdn.dribbble.com/users/3752/screenshots/3302280/attachments/712571/prophet-logo-red.png",
     ], [
-        "$$\\textbf{Tensorflow}$$",
-        "$$\\textbf{PyTorch}$$",
-        "$$\\textbf{Keras}$$",
-        "$$\\textbf{Scikit-Learn}$$",
-        "$$\\textbf{XGBoost}$$",
-        "$$\\textbf{Prophet}$$",
+        "Tensorflow",
+        "PyTorch",
+        "Keras",
+        "Scikit-Learn",
+        "XGBoost",
+        "Prophet",
     ]):
         dsai_image.image(x[0])
         dsai_desc.caption(x[1])
@@ -129,13 +131,13 @@ with cols[0]:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1y_jz77iMIbgVRQ6JEs2YlSSbJs_j0zNEhr5N_Zh2XZxq5bCtZf81lw2UWnoWlD65r-U",
         "https://images.squarespace-cdn.com/content/v1/56e2e0c520c6472a2586add2/1593683608007-L71NCKC2O54GFBHPB0W9/CP%2BLogos%2B2%2B%25288%2529.jpg",
     ], [
-        "$$\\textbf{OpenCV}$$",
-        "$$\\textbf{NLTK}$$",
-        "$$\\textbf{Transformers}$$",
+        "OpenCV",
+        "NLTK",
+        "Transformers",
     ]):
         dsai_image.image(x[0])
         dsai_desc.caption(x[1])
-    st.write("$$\\Large{\\underline{\\textbf{Data Science}}}$$")
+    st.markdown("<h2><u>Data Science</u></h2>", unsafe_allow_html = True)
     ds_image = grid(6)
     ds_desc = grid(6)
     for x in zip([
@@ -145,15 +147,15 @@ with cols[0]:
         "https://www.cienciaedados.com/wp-content/uploads/2023/08/pyspark.jpg",
         "https://raw.githubusercontent.com/pola-rs/polars-static/master/web/splash.png"
     ], [
-        "$$\\textbf{NumPy}$$",
-        "$$\\textbf{Pandas}$$",
-        "$$\\textbf{Plotly}$$",
-        "$$\\textbf{PySpark}$$",
-        "$$\\textbf{Polars}$$",
+        "NumPy",
+        "Pandas",
+        "Plotly",
+        "PySpark",
+        "Polars",
     ]):
         ds_image.image(x[0])
         ds_desc.caption(x[1])
-    st.write("$$\\Large{\\underline{\\textbf{Frameworks}}}$$")
+    st.markdown("<h2><u>Frameworks</u></h2>", unsafe_allow_html = True)
     frameworks_image = grid(6)
     frameworks_desc = grid(6)
     for x in zip([
@@ -164,28 +166,28 @@ with cols[0]:
         "https://miro.medium.com/v2/resize:fit:1000/1*0zMGy7YdRhuSA3X2ymqotg.jpeg",
         "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/ywjqppks5ffcnbfjuttq"
     ], [
-        "$$\\textbf{Git}$$",
-        "$$\\textbf{GitHub}$$",
-        "$$\\textbf{FastAPI}$$",
-        "$$\\textbf{Airflow}$$",
-        "$$\\textbf{MLflow}$$",
-        "$$\\textbf{Docker}$$",
+        "Git",
+        "GitHub",
+        "FastAPI",
+        "Airflow",
+        "MLflow",
+        "Docker",
     ]):
         frameworks_image.image(x[0])
         frameworks_desc.caption(x[1])
-    st.write("$$\\Large{\\underline{\\textbf{Data Visualization}}}$$")
+    st.markdown("<h2><u>Data Visualization</u></h2>", unsafe_allow_html = True)
     ds_image = grid(6)
     ds_desc = grid(6)
     for x in zip([
         "https://www.pngitem.com/pimgs/m/499-4995557_plotly-dash-logo-png-transparent-png.png",
         "https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png"
     ], [
-        "$$\\textbf{Plotly Dash}$$",
-        "$$\\textbf{Streamlit}$$",
+        "Plotly Dash",
+        "Streamlit",
     ]):
         ds_image.image(x[0])
         ds_desc.caption(x[1])
-    st.write("$$\\Large{\\underline{\\textbf{Web Scraping \& Automation}}}$$")
+    st.markdown("<h2><u>Web Scraping & Automation</u></h2>", unsafe_allow_html = True)
     ds_image = grid(6)
     ds_desc = grid(6)
     for x in zip([
@@ -193,38 +195,39 @@ with cols[0]:
         "https://codetorial.net/pyautogui/_images/logo.jpg",
         "https://pbs.twimg.com/profile_images/1374747222353575944/7kS6IhZb_400x400.jpg"
     ], [
-        "$$\\textbf{Selenium}$$",
-        "$$\\textbf{PyAutoGUI}$$",
-        "$$\\textbf{BotCity}$$",
+        "Selenium",
+        "PyAutoGUI",
+        "BotCity",
     ]):
         ds_image.image(x[0])
         ds_desc.caption(x[1])
-    st.write("$$\\Large{\\underline{\\textbf{Cloud}}}$$")
+    st.markdown("<h2><u>Cloud</u></h2>", unsafe_allow_html = True)
     ds_image = grid(6)
     ds_desc = grid(6)
     for x in zip([
         "https://www.nafcu.org/sites/default/files/styles/200_y/public/2018-06/Partner%20Logos-35.png?itok=lGsk2DUF",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"
     ], [
-        "$$\\textbf{AWS}$$",
-        "$$\\textbf{Azure}$$",
+        "AWS",
+        "Azure",
     ]):
         ds_image.image(x[0])
         ds_desc.caption(x[1])
-    st.write("$$\\Large{\\underline{\\textbf{Databases}}}$$")
+    st.markdown("<h2><u>Databases</u></h2>", unsafe_allow_html = True)
     ds_image = grid(6)
     ds_desc = grid(6)
     for x in zip([
         "https://www.tshirtgeek.com.br/wp-content/uploads/2021/08/com031.jpg",
         "https://cdn-icons-png.flaticon.com/512/5968/5968364.png"
     ], [
-        "$$\\textbf{MySQL}$$",
-        "$$\\textbf{SQL Server}$$",
+        "MySQL",
+        "SQL Server",
     ]):
         ds_image.image(x[0])
         ds_desc.caption(x[1])
 with cols[1]:
-    st.latex("\\Huge{\\textbf{Projects}}")
+    st.markdown("<h2 style='text-align:center'>Projects</h2>",
+                unsafe_allow_html = True)
     st.latex("\\Large{\\textbf{2023}}")
     with st.expander(
         label = "",
