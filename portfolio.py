@@ -14,7 +14,7 @@ container1 = grid1.container()
 container2 = grid1.container()
 container2.image("rafael_coelho_photo.jpeg")
 container1.markdown("""<div style='font-size:25px'>
-                    &#8226 Data Scientist and AI Engineer with over 3 years of experience in the industry.<br>
+                    &#8226 Data Scientist and Machine Learning Engineer with over 3 years of experience in the industry.<br>
                     &#8226 Highly proficient in Data Science, Machine Learning, 
                     Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Engineering.<br>
                     &#8226 Developing and deploying machine learning models to solve real-world problems,
