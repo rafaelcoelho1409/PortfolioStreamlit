@@ -30,13 +30,14 @@ main_areas = [
     "Machine Learning",
     "Automation (RPA)",
     "Artificial Intelligence",
+    "Anomaly Detection",
     "Computer Vision"
 ]
 st.divider()
 st.markdown("## **My areas of expertise**")
 grid3 = grid(len(main_areas))
 for x in main_areas:
-    grid3.markdown(f"#### **{x}**")
+    grid3.markdown(f"##### **{x}**")
 cols = container1.columns(2)
 with cols[0]:
     st.markdown("""
@@ -130,10 +131,14 @@ with cols[0]:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/OpenCV_Logo_with_text_svg_version.svg/800px-OpenCV_Logo_with_text_svg_version.svg.png",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1y_jz77iMIbgVRQ6JEs2YlSSbJs_j0zNEhr5N_Zh2XZxq5bCtZf81lw2UWnoWlD65r-U",
         "https://images.squarespace-cdn.com/content/v1/56e2e0c520c6472a2586add2/1593683608007-L71NCKC2O54GFBHPB0W9/CP%2BLogos%2B2%2B%25288%2529.jpg",
+        "https://pythonfix.com/pkg/a/adtk/adtk-banner.webp",
+        "https://repository-images.githubusercontent.com/261086130/fda5f080-866d-11eb-948d-fe0ed7d29014"
     ], [
         "OpenCV",
         "NLTK",
         "Transformers",
+        "Anomaly Detection Toolkit",
+        "NeuralProphet"
     ]):
         dsai_image.image(x[0])
         dsai_desc.caption(x[1])
