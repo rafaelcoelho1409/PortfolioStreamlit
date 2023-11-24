@@ -1,5 +1,17 @@
 import streamlit as st
 from streamlit_extras.grid import grid
+import base64
+
+def image_border_radius(image_path, border_radius, page_object = None):
+    with open(image_path, "rb") as img_file:
+        img_base64 = base64.b64encode(img_file.read()).decode()
+    # Create HTML string with the image
+    img_html = f'<img src="data:image/jpeg;base64,{img_base64}" style="border-radius: {border_radius}px; width: 300px;">'
+    # Display the HTML string in Streamlit
+    if page_object == None:
+        st.markdown(img_html, unsafe_allow_html=True)
+    else:
+        page_object.markdown(img_html, unsafe_allow_html=True)
 
 st.set_page_config(
     page_title = "Rafael Silva Coelho - Portfolio",
@@ -12,7 +24,8 @@ st.markdown("<h1 style='text-align:center'><u>Rafael Silva Coelho - PORTFOLIO</u
 grid1 = grid([4, 1], vertical_align = True)
 container1 = grid1.container()
 container2 = grid1.container()
-container2.image("rafael_coelho_1.jpeg")
+image_border_radius("rafael_coelho_1.jpeg", 20, container2)
+#container2.image("rafael_coelho_1.jpeg")
 container1.markdown("""<div style='font-size:25px'>
                     &#8226 Data Scientist and Machine Learning Engineer with over 3 years of experience in the industry.<br>
                     &#8226 Highly proficient in Data Science, Machine Learning, 
@@ -34,7 +47,8 @@ main_areas = [
     "Computer Vision"
 ]
 st.divider()
-st.markdown("## **My areas of expertise**")
+st.write("$$\\huge{\\textbf{My areas of expertise}}$$")
+#st.markdown("## **My areas of expertise**")
 grid3 = grid(len(main_areas))
 for x in main_areas:
     grid3.markdown(f"##### **{x}**")
@@ -64,15 +78,16 @@ st.latex("\\Huge{\\textbf{COELHO Finance}}")
 grid2 = grid([1, 4])
 container3 = grid2.container()
 container4 = grid2.container()
-container3.image("coelho_finance_logo.png")
+image_border_radius("coelho_finance_logo.png", 20, container3)
+#container3.image("coelho_finance_logo.png")
 container3.markdown("""
-    <h1>
+    <h2>
     <a 
         style='text-align:center'
         href='https://coelhofinance.streamlit.app/'>
     COELHO Finance
     </a>
-    </h1>""",
+    </h2>""",
     unsafe_allow_html = True)
 container4.markdown("""<div style='font-size:28px'>
                     Get to know <a href='https://coelhofinance.streamlit.app'>COELHO Finance</a>,
