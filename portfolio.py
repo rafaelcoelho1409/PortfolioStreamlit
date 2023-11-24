@@ -33,7 +33,7 @@ container1.markdown("""<div style='font-size:25px'>
                     &#8226 Developing and deploying machine learning models to solve real-world problems,
                     such as predictive models, anomaly detection and other models to be applied in industry areas,
                     such as Finance, Marketing, Commodities, Retail etc.<br>
-                    &#8226 Actually working in one of the Big Four companies for over a year.<br><br>
+                    &#8226 Recently worked in one of the Big Four companies for over a year.<br><br>
         </div>""",
         unsafe_allow_html = True)
 main_areas = [
