@@ -75,7 +75,7 @@ with cols[1]:
         unsafe_allow_html = True)
 st.divider()
 st.latex("\\Huge{\\textbf{COELHO Finance}}")
-grid2 = grid([1, 4])
+grid2 = grid([1, 2])
 container3 = grid2.container()
 container4 = grid2.container()
 image_border_radius("coelho_finance_logo.png", 20, container3)
