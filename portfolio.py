@@ -43,7 +43,6 @@ with tabs[0]:#INTRODUCTION
                         such as predictive models, anomaly detection and other models to be applied in industry areas,
                         such as Finance, Marketing, Commodities, Retail etc.<br>
                         &#8226 Recently worked in one of the Big Four companies for over a year.<br><br><br>
-                        <b>Email:</b> rafaelcoelho1409@hotmail.com
             </div>""",
             unsafe_allow_html = True)
     cols = container1.columns(2)
