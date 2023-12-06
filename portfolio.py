@@ -171,7 +171,7 @@ with tabs[2]: #TECH STACKS / SKILLS
     grid_1 = tech_cols1.columns(6)
     for tech_list in (
         ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
-        ["OpenCV", " NLTK", "Hugging Face Transformers", " ADTK"]):
+        ["OpenCV", " NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels"]):
         for i, tech in enumerate(tech_list):
             with grid_1[i]:
                 if tech_images[tech].startswith("http"):
