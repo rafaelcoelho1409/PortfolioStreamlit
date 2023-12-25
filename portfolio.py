@@ -171,7 +171,21 @@ with tabs[2]: #TECH STACKS / SKILLS
     grid_1 = tech_cols1.columns(6)
     for tech_list in (
         ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
-        ["OpenCV", " NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels"]):
+        [" NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels"]):
+        for i, tech in enumerate(tech_list):
+            with grid_1[i]:
+                if tech_images[tech].startswith("http"):
+                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
+                    st.caption(tech)
+                else:
+                    display_text_in_colored_square(
+                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
+                        background_color = "black")
+                    st.caption(tech_images[tech])
+    tech_cols1.markdown("<h2><u>Computer Vision</u></h2>", unsafe_allow_html = True)
+    grid_1 = tech_cols1.columns(6)
+    for tech_list in (
+        ["OpenCV", "Ultralytics", "MediaPipe"], []):
         for i, tech in enumerate(tech_list):
             with grid_1[i]:
                 if tech_images[tech].startswith("http"):
@@ -210,8 +224,8 @@ with tabs[2]: #TECH STACKS / SKILLS
                         f"<h4>{tech.replace(' ', '<br>')}</h4>",
                         background_color = "black")
                     st.caption(tech_images[tech])
-    tech_cols1.markdown("<h2><u>Data Visualization</u></h2>", unsafe_allow_html = True)
-    grid_4 = tech_cols1.columns(6)
+    tech_cols2.markdown("<h2><u>Data Visualization</u></h2>", unsafe_allow_html = True)
+    grid_4 = tech_cols2.columns(6)
     for tech_list in (
         ["Plotly Dash", "Streamlit"], []):
         for i, tech in enumerate(tech_list):
