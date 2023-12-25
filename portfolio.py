@@ -154,6 +154,36 @@ with tabs[1]: #PORTFOLIO PROJECTS
             with cols[i]:
                 st.image(f"./assets/f1analytics{i+1:0>2}.png")
     st.divider()
+    style3 = grid([1, 0.2, 3])
+    image3 = style3.container()
+    image_border_radius_url(
+        "./assets/coelho_vision_logo.png",
+        "https://coelhovision.streamlit.app/",
+        20, 100, 100, image3)
+    style3.container()
+    description3 = style3.container()
+    description3.write("$$\\Huge{\\textbf{COELHO VISION}}$$")
+    description3.markdown("""<div style='font-size:20px'>
+    COELHO VISION: Revolutionizing Computer Vision<br><br>
+    Explore COELHO VISION, a cutting-edge platform utilizing OpenCV, 
+    Ultralytics, and MediaPipe for advanced Computer Vision applications. Key offerings include:<br><br>
+    <b>1) Object Detection:</b> For object, image classification, and face detection.<br>
+    <b>2) Image Segmentation:</b> Precise segmentation for detailed image analysis.<br>
+    <b>3) Pose Estimation:</b> Tools for gesture recognition and motion analysis.<br>
+    <b>4) Live Camera Integration:</b> Apply these technologies in real-time using your device's camera.<br>
+    <br>
+    Ideal for developers and tech enthusiasts, COELHO VISION is at the forefront of integrating AI with Computer Vision, providing practical, innovative solutions for digital imagery.
+    <br><br>
+    <b><i>Discover more with COELHO VISION – where technology meets vision.</i></b></div>""", unsafe_allow_html = True)
+    with st.expander(
+        label = "COELHO VISION",
+        expanded = True
+    ):
+        cols = st.columns(10)
+        for i in range(0, 10):
+            with cols[i]:
+                st.image(f"./assets/coelhovision{i+1:0>2}.png")
+    st.divider()
 
 
 with tabs[2]: #TECH STACKS / SKILLS
