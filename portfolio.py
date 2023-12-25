@@ -164,7 +164,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
     description3 = style3.container()
     description3.write("$$\\Huge{\\textbf{COELHO VISION}}$$")
     description3.markdown("""<div style='font-size:20px'>
-    <b>COELHO VISION: Revolutionizing Computer Vision</b><br><br>
+    <b><a href='https://coelhovision.streamlit.app/'>COELHO VISION</a>: Revolutionizing Computer Vision</b><br><br>
     Explore COELHO VISION, a cutting-edge platform utilizing OpenCV, 
     Ultralytics, and MediaPipe for advanced Computer Vision applications. Key offerings include:<br><br>
     <b>1) Object Detection:</b> For object, image classification, and face detection.<br>
