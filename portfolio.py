@@ -310,6 +310,14 @@ with tabs[3]:
 """,
     """
 <div style='font-size:35px'><b>
+<a href='https://coelhovision.streamlit.app/'>
+COELHO VISION
+</a><br>
+<p>December 2023</p>
+</b></div>
+""",
+    """
+<div style='font-size:35px'><b>
 <a href='https://f1analytics.streamlit.app/'>
 Formula 1 Analytics
 </a><br>
