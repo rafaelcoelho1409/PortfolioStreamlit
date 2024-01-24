@@ -31,8 +31,8 @@ class Reactivate:
                 By.XPATH,
                 '//button[text() = "Yes, get this app back up!"]'
             )
+            self.get_up_button.click()
             print(self.get_up_button.text)
-            #self.get_up_button.click()
         except:
             print("Button not found.")
             pass
