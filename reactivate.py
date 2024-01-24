@@ -7,7 +7,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
-import pandas as pd 
 import datetime as dt 
 
 class Reactivate:
