@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
@@ -31,9 +32,10 @@ class Reactivate:
                 By.XPATH,
                 '//button[text() = "Yes, get this app back up!"]'
             )
-            self.get_up_button.click()
-            print(self.get_up_button.text)
-        except:
+            if self.get_up_button.is_displayed():
+                self.get_up_button.click()
+                print(self.get_up_button.text)
+        except NoSuchElementException:
             print("Button not found.")
             pass
 
