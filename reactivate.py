@@ -32,6 +32,7 @@ class Reactivate:
                 By.XPATH,
                 '//button[text() = "Yes, get this app back up!"]'
             )
+            time.sleep(1)
             if self.get_up_button.is_displayed():
                 self.get_up_button.click()
                 print(self.get_up_button.text)
