@@ -37,6 +37,6 @@ class Reactivate:
             print("Button not found.")
             pass
 
-bot = Reactivate(headless = False)
+bot = Reactivate()
 bot.get_url()
 bot.search_get_up_button()
