@@ -257,7 +257,7 @@ with tabs[2]: #TECH STACKS / SKILLS
     tech_cols2.markdown("<h2><u>Data Visualization</u></h2>", unsafe_allow_html = True)
     grid_4 = tech_cols2.columns(6)
     for tech_list in (
-        ["Plotly Dash", "Streamlit"], []):
+        ["Plotly Dash", "Streamlit", "Power BI"], []):
         for i, tech in enumerate(tech_list):
             with grid_4[i]:
                 if tech_images[tech].startswith("http"):
