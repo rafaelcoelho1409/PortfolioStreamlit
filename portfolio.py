@@ -254,10 +254,10 @@ with tabs[2]: #TECH STACKS / SKILLS
                         f"<h4>{tech.replace(' ', '<br>')}</h4>",
                         background_color = "black")
                     st.caption(tech_images[tech])
-    tech_cols2.markdown("<h2><u>Data Visualization</u></h2>", unsafe_allow_html = True)
+    tech_cols2.markdown("<h2><u>Data Visualization / Software Development</u></h2>", unsafe_allow_html = True)
     grid_4 = tech_cols2.columns(6)
     for tech_list in (
-        ["Plotly Dash", "Streamlit", "Power BI"], []):
+        ["Plotly Dash", "Streamlit", "PyQt6", "Power BI"], []):
         for i, tech in enumerate(tech_list):
             with grid_4[i]:
                 if tech_images[tech].startswith("http"):
