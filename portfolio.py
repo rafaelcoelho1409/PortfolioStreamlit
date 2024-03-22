@@ -215,7 +215,7 @@ with tabs[2]: #TECH STACKS / SKILLS
     tech_cols1.markdown("<h2><u>Computer Vision</u></h2>", unsafe_allow_html = True)
     grid_1 = tech_cols1.columns(6)
     for tech_list in (
-        ["OpenCV", "Ultralytics", "MediaPipe"], []):
+        ["OpenCV", "Ultralytics", "MediaPipe", "OpenVINO"], []):
         for i, tech in enumerate(tech_list):
             with grid_1[i]:
                 if tech_images[tech].startswith("http"):
