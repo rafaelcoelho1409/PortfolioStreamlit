@@ -1,3 +1,4 @@
+import datetime as dt
 import streamlit as st
 from streamlit_extras.grid import grid
 import base64
@@ -35,8 +36,8 @@ with tabs[0]:#INTRODUCTION
     grid1.container()
     container2 = grid1.container()
     image_border_radius("./assets/rafael_coelho_1.jpeg", 20, 100, 100, container2)
-    container1.markdown("""<div style='font-size:25px'>
-                        &#8226 Data Scientist and Machine Learning Engineer with over 4 years of experience in the industry.<br>
+    container1.markdown(f"""<div style='font-size:25px'>
+                        &#8226 Data Scientist and Machine Learning Engineer with over {str(dt.datetime.now().year - 2020)} years of experience in the industry.<br>
                         &#8226 Highly proficient in Data Science, Machine Learning, 
                         Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Engineering.<br>
                         &#8226 Developing and deploying machine learning models to solve real-world problems,
@@ -47,25 +48,19 @@ with tabs[0]:#INTRODUCTION
             unsafe_allow_html = True)
     cols = container1.columns(2)
     with cols[0]:
-        st.markdown("""
-            <h1>
-            <a 
-                style='text-align:center'
-                href='https://www.linkedin.com/in/rafaelcoelho1409/'>
-            LinkedIn
-            </a>
-            </h1>""",
-            unsafe_allow_html = True)
+        st.link_button(
+            "LinkedIn",
+            "https://www.linkedin.com/in/rafaelcoelho1409/",
+            type = "primary",
+            use_container_width = True
+        )
     with cols[1]:
-        st.markdown("""
-            <h1>
-            <a 
-                style='text-align:center'
-                href='https://github.com/rafaelcoelho1409'>
-            GitHub
-            </a>
-            </h1>""",
-            unsafe_allow_html = True)
+        st.link_button(
+            "GitHub",
+            "https://github.com/rafaelcoelho1409/",
+            type = "primary",
+            use_container_width = True
+        )
     st.divider()
 
 
@@ -257,7 +252,7 @@ with tabs[2]: #TECH STACKS / SKILLS
     tech_cols2.markdown("<h2><u>Data Visualization / Software Development</u></h2>", unsafe_allow_html = True)
     grid_4 = tech_cols2.columns(6)
     for tech_list in (
-        ["Plotly Dash", "Streamlit", "PyQt6", "Power BI"], []):
+        ["Plotly Dash", "Streamlit", "PyQt6"], []):
         for i, tech in enumerate(tech_list):
             with grid_4[i]:
                 if tech_images[tech].startswith("http"):
