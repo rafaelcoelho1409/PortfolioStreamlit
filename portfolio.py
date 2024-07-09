@@ -40,7 +40,7 @@ with tabs[0]:#INTRODUCTION
     container1.markdown(f"""<div style='font-size:25px'>
                         &#8226 Data Scientist and Machine Learning Engineer with over {str(dt.datetime.now().year - 2020)} years of experience in the industry.<br>
                         &#8226 Highly proficient in Data Science, Machine Learning, 
-                        Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Engineering.<br>
+                        Computer Vision and Cybersecurity.<br>
                         &#8226 Developing and deploying machine learning models to solve real-world problems,
                         such as predictive models, anomaly detection and other models to be applied in industry areas,
                         such as Finance, Marketing, Commodities, Retail etc.<br>
