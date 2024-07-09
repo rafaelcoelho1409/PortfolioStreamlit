@@ -314,17 +314,25 @@ with tabs[2]: #TECH STACKS / SKILLS
             tech_images
         )
         tech_cols1.markdown("<h2><u>Asset Discovery</u></h2>", unsafe_allow_html = True)
-        grid_4= tech_cols1.columns(6)
+        grid_4 = tech_cols1.columns(6)
         tech_stack(
             grid_4,
             ["Shodan", "Censys"],
             [],
             tech_images
         )
-        tech_cols2.markdown("<h2><u>Vulnerability Assessment</u></h2>", unsafe_allow_html = True)
-        grid_5 = tech_cols2.columns(6)
+        tech_cols1.markdown("<h2><u>Bug Bounty Platforms</u></h2>", unsafe_allow_html = True)
+        grid_5 = tech_cols1.columns(6)
         tech_stack(
             grid_5,
+            ["HackerOne", "BugCrowd", "Intigriti"],
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Vulnerability Assessment</u></h2>", unsafe_allow_html = True)
+        grid_6 = tech_cols2.columns(6)
+        tech_stack(
+            grid_6,
             ["Metasploit", "Burp Suite", "NMAP", "Nikto", "Project Discovery Tools"],
             [],
             tech_images
