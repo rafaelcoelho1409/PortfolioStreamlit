@@ -95,4 +95,24 @@ def create_scrollable_section(content, page_object = None, height="400px"):
         return st.markdown(scrollable_section_html, unsafe_allow_html = True)
     else:
         return page_object.markdown(scrollable_section_html, unsafe_allow_html = True)
+    
+def tech_stack(
+    grid,
+    tech_list1,
+    tech_list2,
+    tech_images
+):
+    for tech_list in (
+        tech_list1,
+        tech_list2):
+        for i, tech in enumerate(tech_list):
+            with grid[i]:
+                if tech_images[tech].startswith("http"):
+                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
+                    st.caption(tech)
+                else:
+                    display_text_in_colored_square(
+                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
+                        background_color = "black")
+                    st.caption(tech_images[tech])
       

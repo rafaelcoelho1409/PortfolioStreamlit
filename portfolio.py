@@ -7,7 +7,8 @@ from functions import (
     image_border_radius,
     image_border_radius_url,
     display_text_in_colored_square,
-    create_scrollable_section
+    create_scrollable_section,
+    tech_stack
 )
 
 st.set_page_config(
@@ -65,7 +66,7 @@ with tabs[0]:#INTRODUCTION
 
 
     #MY AREAS OF EXPERTISE
-    main_areas = [
+    main_areas1 = [
         "Data<br>Science",
         "Data<br>Engineering",
         "Data<br>Analytics",
@@ -75,13 +76,27 @@ with tabs[0]:#INTRODUCTION
         "Anomaly<br>Detection",
         "Computer<br>Vision"
     ]
+    main_areas2 = [
+        "Open Source Intelligence (OSINT)",
+        "Pentesting"
+    ]
     st.markdown("<i><h2 style='text-align:center'>My areas of expertise</h2></i>",
                 unsafe_allow_html = True)
-    grid3 = grid(len(main_areas))
-    for x in main_areas:
+    st.markdown("<b><h3 style='text-align:center'>Data Science & Artificial Intelligence</h3></b>",
+                unsafe_allow_html = True)
+    grid3 = grid(len(main_areas1))
+    for x in main_areas1:
         display_text_in_colored_square(
             f"<h3>{x}</h3>",
             grid3,
+            "gray")
+    st.markdown("<b><h3 style='text-align:center'>Cybersecurity</h3></b>",
+                unsafe_allow_html = True)
+    grid4 = grid(len(main_areas2))
+    for x in main_areas2:
+        display_text_in_colored_square(
+            f"<h3>{x}</h3>",
+            grid4,
             "gray")
     st.divider()
 
@@ -186,140 +201,190 @@ with tabs[2]: #TECH STACKS / SKILLS
     st.markdown("<h1 style='text-align:center'>Tech Stacks / Skills</h1>",
                 unsafe_allow_html = True)
     st.divider()
-    tech_cols = grid([2, 0.2, 2])
-    tech_cols1 = tech_cols.container()
-    tech_cols.container()
-    tech_cols2 = tech_cols.container()
+    tabs_tech_stacks = st.tabs([
+        "$$\\Large{\\textbf{    Data Science \& Artificial Intelligence    }}$$",
+        "$$\\Large{\\textbf{    Cybersecurity    }}$$",
+    ])
 
-
-    tech_cols1.markdown("<h2><u>Artificial Intelligence / Machine Learning</u></h2>", unsafe_allow_html = True)
-    grid_1 = tech_cols1.columns(6)
-    for tech_list in (
-        ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
-        [" NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels"]):
-        for i, tech in enumerate(tech_list):
-            with grid_1[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols1.markdown("<h2><u>Computer Vision</u></h2>", unsafe_allow_html = True)
-    grid_1 = tech_cols1.columns(6)
-    for tech_list in (
-        ["OpenCV", "Ultralytics", "MediaPipe", "OpenVINO"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_1[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols1.markdown("<h2><u>Data Science & Data Engineering</u></h2>", unsafe_allow_html = True)
-    grid_2 = tech_cols1.columns(6)
-    for tech_list in (
-        ["NumPy", "Pandas", "Plotly", "PySpark", "Polars"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_2[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols1.markdown("<h2><u>CI/CD (Continuous Integration/Continuous Delivery)</u></h2>", unsafe_allow_html = True)
-    grid_3 = tech_cols1.columns(6)
-    for tech_list in (
-        ["Git", "GitHub", "FastAPI", "Apache Airflow", "MLflow", "Docker"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_3[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols2.markdown("<h2><u>Data Visualization / Software Development</u></h2>", unsafe_allow_html = True)
-    grid_4 = tech_cols2.columns(6)
-    for tech_list in (
-        ["Plotly Dash", "Streamlit", "PyQt6"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_4[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols2.markdown("<h2><u>Web Scraping & Automation</u></h2>", unsafe_allow_html = True)
-    grid_5 = tech_cols2.columns(6)
-    for tech_list in (
-        ["Selenium WebDriver", "PyAuto GUI", "BotCity"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_5[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols2.markdown("<h2><u>Cloud</u></h2>", unsafe_allow_html = True)
-    grid_6 = tech_cols2.columns(6)
-    for tech_list in (
-        ["AWS", "Azure", "GCP"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_6[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols2.markdown("<h2><u>Databases</u></h2>", unsafe_allow_html = True)
-    grid_7 = tech_cols2.columns(6)
-    for tech_list in (
-        ["MySQL", "SQL Server"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_7[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    tech_cols2.markdown("<h2><u>Languages</u></h2>", unsafe_allow_html = True)
-    grid_8 = tech_cols2.columns(6)
-    for tech_list in (
-        ["Python"], []):
-        for i, tech in enumerate(tech_list):
-            with grid_8[i]:
-                if tech_images[tech].startswith("http"):
-                    image_border_radius(tech_images[tech], 10, 100, 100, is_html = True)
-                    st.caption(tech)
-                else:
-                    display_text_in_colored_square(
-                        f"<h4>{tech.replace(' ', '<br>')}</h4>",
-                        background_color = "black")
-                    st.caption(tech_images[tech])
-    st.divider()
+    with tabs_tech_stacks[0]: #DATA SCIENCE & ARTIFICIAL INTELLIGENCE
+        tech_cols = grid([2, 0.2, 2])
+        tech_cols1 = tech_cols.container()
+        tech_cols.container()
+        tech_cols2 = tech_cols.container()
+        tech_cols1.markdown("<h2><u>Artificial Intelligence / Machine Learning</u></h2>", unsafe_allow_html = True)
+        grid_1 = tech_cols1.columns(6)
+        tech_stack(
+            grid_1,
+            ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
+            [" NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels"],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>Computer Vision</u></h2>", unsafe_allow_html = True)
+        grid_1 = tech_cols1.columns(6)
+        tech_stack(
+            grid_1,
+            ["OpenCV", "Ultralytics", "MediaPipe", "OpenVINO"],
+            [],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>Data Science & Data Engineering</u></h2>", unsafe_allow_html = True)
+        grid_2 = tech_cols1.columns(6)
+        tech_stack(
+            grid_2,
+            ["NumPy", "Pandas", "Plotly", "PySpark", "Polars"],
+            [],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>CI/CD (Continuous Integration/Continuous Delivery)</u></h2>", unsafe_allow_html = True)
+        grid_3 = tech_cols1.columns(6)
+        tech_stack(
+            grid_3,
+            ["Git", "GitHub", "FastAPI", "MLflow", "Docker"],
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Data Visualization / Software Development</u></h2>", unsafe_allow_html = True)
+        grid_4 = tech_cols2.columns(6)
+        tech_stack(
+            grid_4,
+            ["Plotly Dash", "Streamlit", "PyQt6"],
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Automation</u></h2>", unsafe_allow_html = True)
+        grid_5 = tech_cols2.columns(6)
+        tech_stack(
+            grid_5,
+            ["Selenium WebDriver", "PyAuto GUI", "BotCity", "Apache Airflow", "Luigi"],
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Cloud</u></h2>", unsafe_allow_html = True)
+        grid_6 = tech_cols2.columns(6)
+        tech_stack(
+            grid_6,
+            ["AWS", "Azure", "GCP"],
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Databases</u></h2>", unsafe_allow_html = True)
+        grid_7 = tech_cols2.columns(6)
+        tech_stack(
+            grid_7,
+            ["MySQL", "SQL Server"], 
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Languages</u></h2>", unsafe_allow_html = True)
+        grid_8 = tech_cols2.columns(6)
+        tech_stack(
+            grid_8,
+            ["Python"], 
+            [],
+            tech_images
+        )
+        st.divider()
+    with tabs_tech_stacks[1]: #CYBERSECURITY
+        tech_cols = grid([2, 0.2, 2])
+        tech_cols1 = tech_cols.container()
+        tech_cols.container()
+        tech_cols2 = tech_cols.container()
+        tech_cols1.markdown("<h2><u>Virtual Machines & Operational Systems</u></h2>", unsafe_allow_html = True)
+        grid_1 = tech_cols1.columns(6)
+        tech_stack(
+            grid_1,
+            ["QEMU", "KALI Linux", "Ubuntu"],
+            [],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>Automation</u></h2>", unsafe_allow_html = True)
+        grid_2 = tech_cols1.columns(6)
+        tech_stack(
+            grid_2,
+            ["Selenium WebDriver", "Apache Airflow", "Luigi"],
+            [],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>Languages</u></h2>", unsafe_allow_html = True)
+        grid_3 = tech_cols1.columns(6)
+        tech_stack(
+            grid_3,
+            ["Python", "Bash", "Go"],
+            [],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>Asset Discovery</u></h2>", unsafe_allow_html = True)
+        grid_4= tech_cols1.columns(6)
+        tech_stack(
+            grid_4,
+            ["Shodan", "Censys"],
+            [],
+            tech_images
+        )
+        tech_cols2.markdown("<h2><u>Vulnerability Assessment</u></h2>", unsafe_allow_html = True)
+        grid_5 = tech_cols2.columns(6)
+        tech_stack(
+            grid_5,
+            ["Metasploit", "Burp Suite", "NMAP", "Nikto", "Project Discovery Tools"],
+            [],
+            tech_images
+        )
+        tech_cols2_cols = tech_cols2.columns(2)
+        tech_cols2_cols[0].markdown("<h3>Project Discovery Tools</h3>", unsafe_allow_html = True)
+        project_discovery_tools = [
+            "Nuclei",
+            "Subfinder",
+            "HTTPX",
+            "DNSX",
+            "Katana",
+            "Naabu"
+        ]
+        for x in project_discovery_tools:
+            tech_cols2_cols[0].markdown(f"* {x}")
+        tech_cols2_cols[0].divider()
+        tech_cols2_cols[0].markdown("<h3>Python Tools</h3>", unsafe_allow_html = True)
+        python_tools = [
+            "DNSReaper (Subdomain Takeover)",
+            "GraphW00f (GraphQL fingerprint)",
+            "Arjun (Hidden URL parameters)",
+            "SSTImap (Template Injection)",
+            "SQLmap (SQL Injection)",
+            "SpyHunt",
+            "CORSY (CORS Misconfiguration)",
+            "XSRFProbe (Cross-Site Request Forgery - CSRF)",
+            "XSStrike (XSS Scanner)",
+            "FavFreak (Favicon)"
+        ]
+        for x in python_tools:
+            tech_cols2_cols[0].markdown(f"* {x}")
+        tech_cols2_cols[0].divider()
+        tech_cols2_cols[1].markdown("<h3>Go Tools</h3>", unsafe_allow_html = True)
+        go_tools = [
+            "WayBackURLs",
+            "FFuF (Fuzzer)",
+            "Goctopus (GraphQL Fingerprint)",
+            "TInjA (Template Injection)",
+            "SURF (Server Side Request Forgery - SSRF)",
+            "SmuggleFuzz (Request Smuggling)",
+            "Gxss (XSS Scanner)",
+            "DalFox (XSS Scanner)",
+            "Subzy (Subdomain Takeover)",
+            "MX-SPF Takeover (Subdomain Takeover)",
+            "403jump (403 Status Code Bypass)",
+            "Favirecon (Favicon)",
+            "Shortscan (Windows IIS)",
+            "Trufflehog (Credentials Scanner)"
+        ]
+        for x in go_tools:
+            tech_cols2_cols[1].markdown(f"* {x}")
+        tech_cols2_cols[1].divider()
+        tech_cols2_cols[1].markdown("<h3>Other Tools</h3>", unsafe_allow_html = True)
+        other_tools = [
+            "Trivy (Credentials & Security Scanner)"
+        ]
+        for x in other_tools:
+            tech_cols2_cols[1].markdown(f"* {x}")
+        tech_cols2_cols[1].divider()
 
 
 with tabs[3]:
