@@ -1,4 +1,5 @@
 import streamlit as st
+import streamfy as sy
 import base64
 
 def image_border_radius(image_path, border_radius, width, height, page_object = None, is_html = False):
@@ -115,4 +116,12 @@ def tech_stack(
                         f"<h4>{tech.replace(' ', '<br>')}</h4>",
                         background_color = "black")
                     st.caption(tech_images[tech])
-      
+
+def image_carousel(images):
+    # Convert local image paths to displayable format
+    image_urls = [f"data:image/jpg;base64,{base64.b64encode(open(image, 'rb').read()).decode()}" for image in images]
+    # Use the Streamfy component for the image carousel
+    image_carousel = sy.carousel(
+        items = image_urls
+    )
+    return image_carousel

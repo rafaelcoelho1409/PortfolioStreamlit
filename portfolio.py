@@ -1,14 +1,14 @@
 import datetime as dt
 import streamlit as st
 from streamlit_extras.grid import grid
-import base64
 import json
 from functions import (
     image_border_radius,
     image_border_radius_url,
     display_text_in_colored_square,
     create_scrollable_section,
-    tech_stack
+    tech_stack,
+    image_carousel
 )
 
 st.set_page_config(
@@ -36,7 +36,14 @@ with tabs[0]:#INTRODUCTION
     container1 = grid1.container()
     grid1.container()
     container2 = grid1.container()
-    image_border_radius("./assets/rafael_coelho_1.jpeg", 20, 100, 100, container2)
+    #image_border_radius("./assets/rafael001.jpeg", 20, 100, 100, container2)
+    with container2:
+        local_images = [
+            "assets/rafael001.jpeg", 
+            "assets/rafael002.jpeg", 
+            "assets/rafael003.jpeg",
+            "assets/rafael004.jpeg"]
+        image_carousel(local_images)
     container1.markdown(f"""<div style='font-size:25px'>
                         &#8226 Data Scientist and Machine Learning Engineer with over {str(dt.datetime.now().year - 2020)} years of experience in the industry.<br>
                         &#8226 Highly proficient in Data Science, Machine Learning, 
@@ -105,16 +112,20 @@ with tabs[1]: #PORTFOLIO PROJECTS
     st.markdown("<h1 style='text-align:center'>Portfolio Projects</h1>",
                 unsafe_allow_html = True)
     st.divider()
-    style1 = grid([1, 0.2, 3])
+    style1 = grid([1, 0.2, 2])
     image1 = style1.container()
     image_border_radius_url(
         "./assets/coelho_finance_logo.png",
         "https://coelhofinance.streamlit.app/",
         20, 100, 100, image1)
+    with image1:
+        image_carousel([
+            f"assets/coelhofinance{x:0>2}.png" for x in range(1, 11)
+        ])
     style1.container()
     description1 = style1.container()
     description1.write("$$\\Huge{\\textbf{COELHO Finance}}$$")
-    description1.markdown("""<div style='font-size:20px'>
+    description1.markdown("""<div style='font-size:25px'>
                         Get to know <a href='https://coelhofinance.streamlit.app'>COELHO Finance</a>,
                         a new powerful tool to help you make informed investment decisions, 
                         track your investments and identify opportunities. With COELHO Finance, 
@@ -124,25 +135,21 @@ with tabs[1]: #PORTFOLIO PROJECTS
                         personal portfolio project to test lots of Data Science, Machine Learning
                         and Artificial Intelligence tools and frameworks applied to Financial Market. 
                         For now, the access to the platform is free.</div>""", unsafe_allow_html = True)
-    with st.expander(
-        label = "COELHO Finance",
-        expanded = True
-    ):
-        cols = st.columns(10)
-        for i in range(0, 10):
-            with cols[i]:
-                st.image(f"./assets/coelhofinance{i+1:0>2}.png")
     st.divider()
-    style2 = grid([1, 0.2, 3])
+    style2 = grid([1, 0.2, 2])
     image2 = style2.container()
     image_border_radius_url(
         "./assets/f1_home.jpg",
         "https://f1analytics.streamlit.app/",
         20, 100, 100, image2)
+    with image2:
+        image_carousel([
+            f"assets/f1analytics{x:0>2}.png" for x in range(1, 11)
+        ])
     style2.container()
     description2 = style2.container()
     description2.write("$$\\Huge{\\textbf{Formula 1 Analytics}}$$")
-    description2.markdown("""<div style='font-size:20px'>
+    description2.markdown("""<div style='font-size:25px'>
     Discover the exhilarating world of Formula One racing like never before with 
     <a href='https://f1analytics.streamlit.app/'>Formula One Analytics</a>, your ultimate 
     destination for everything F1. From the rich history and iconic circuits to in-depth analyses 
@@ -155,25 +162,21 @@ with tabs[1]: #PORTFOLIO PROJECTS
     the thrill of F1, promising to reshape how we experience this fascinating sport. 
     Join us at Formula One Analytics for a unique journey into the heart of Formula 1 racing, 
     where data-driven excitement meets the roar of the engines! 🏎️🏁</div>""", unsafe_allow_html = True)
-    with st.expander(
-        label = "Formula 1 Analytics",
-        expanded = True
-    ):
-        cols = st.columns(10)
-        for i in range(0, 10):
-            with cols[i]:
-                st.image(f"./assets/f1analytics{i+1:0>2}.png")
     st.divider()
-    style3 = grid([1, 0.2, 3])
+    style3 = grid([1, 0.2, 2])
     image3 = style3.container()
     image_border_radius_url(
         "./assets/coelho_vision_logo.png",
         "https://coelhovision.streamlit.app/",
         20, 100, 100, image3)
+    with image3:
+        image_carousel([
+            f"assets/coelhovision{x:0>2}.png" for x in range(1, 11)
+        ])
     style3.container()
     description3 = style3.container()
     description3.write("$$\\Huge{\\textbf{COELHO VISION}}$$")
-    description3.markdown("""<div style='font-size:20px'>
+    description3.markdown("""<div style='font-size:25px'>
     <b><a href='https://coelhovision.streamlit.app/'>COELHO VISION</a>: Revolutionizing Computer Vision</b><br><br>
     Explore COELHO VISION, a cutting-edge platform utilizing OpenCV, 
     Ultralytics, and MediaPipe for advanced Computer Vision applications. Key offerings include:<br><br>
@@ -185,14 +188,6 @@ with tabs[1]: #PORTFOLIO PROJECTS
     Ideal for developers and tech enthusiasts, COELHO VISION is at the forefront of integrating AI with Computer Vision, providing practical, innovative solutions for digital imagery.
     <br><br>
     <b><i>Discover more with COELHO VISION – where technology meets vision.</i></b></div>""", unsafe_allow_html = True)
-    with st.expander(
-        label = "COELHO VISION",
-        expanded = True
-    ):
-        cols = st.columns(10)
-        for i in range(0, 10):
-            with cols[i]:
-                st.image(f"./assets/coelhovision{i+1:0>2}.png")
     st.divider()
 
 
