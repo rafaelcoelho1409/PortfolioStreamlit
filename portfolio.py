@@ -211,7 +211,7 @@ with tabs[2]: #TECH STACKS / SKILLS
         tech_stack(
             grid_1,
             ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
-            [" NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels"],
+            [" NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels", "UMAP"],
             tech_images
         )
         tech_cols1.markdown("<h2><u>Computer Vision</u></h2>", unsafe_allow_html = True)
