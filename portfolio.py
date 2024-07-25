@@ -218,7 +218,7 @@ with tabs[2]: #TECH STACKS / SKILLS
         grid_1 = tech_cols1.columns(6)
         tech_stack(
             grid_1,
-            ["OpenCV", "Ultralytics", "MediaPipe", "OpenVINO"],
+            ["OpenCV", "Ultralytics", "MediaPipe", "OpenVINO", "RoboFlow"],
             [],
             tech_images
         )
