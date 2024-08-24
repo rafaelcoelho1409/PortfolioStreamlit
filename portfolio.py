@@ -45,6 +45,7 @@ with tabs[0]:#INTRODUCTION
             "assets/rafael004.jpeg"]
         image_carousel(local_images)
     container1.markdown(f"""<div style='font-size:25px'>
+                        &#8226 Bachelor's degree in Mathematics at Federal University of Paraná (UFPR)
                         &#8226 Data Scientist and Machine Learning Engineer with over {str(dt.datetime.now().year - 2020)} years of experience in the industry.<br>
                         &#8226 Highly proficient in Data Science, Machine Learning, 
                         Computer Vision and Cybersecurity.<br>
