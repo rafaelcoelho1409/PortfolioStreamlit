@@ -45,14 +45,14 @@ with tabs[0]:#INTRODUCTION
             "assets/rafael004.jpeg"]
         image_carousel(local_images)
     container1.markdown(f"""<div style='font-size:25px'>
-                        &#8226 Bachelor's degree in Mathematics at Federal University of Paraná (UFPR).<br>
+                        &#8226 Bachelor's degree in Mathematics at Federal University of Paraná (UFPR) - Brazil.<br>
                         &#8226 Data Scientist and Machine Learning Engineer with over {str(dt.datetime.now().year - 2020)} years of experience in the industry.<br>
                         &#8226 Highly proficient in Data Science, Machine Learning, 
                         Computer Vision and Cybersecurity.<br>
                         &#8226 Developing and deploying machine learning models to solve real-world problems,
                         such as predictive models, anomaly detection and other models to be applied in industry areas,
                         such as Finance, Marketing, Commodities, Retail etc.<br>
-                        &#8226 Recently worked in one of the Big Four companies for over a year.<br><br><br>
+                        &#8226 Recently worked in KPMG, one of the Big Four accounting companies, for over a year.<br><br><br>
             </div>""",
             unsafe_allow_html = True)
     cols = container1.columns(2)
@@ -119,6 +119,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
         "./assets/coelho_finance_logo.png",
         "https://coelhofinance.streamlit.app/",
         20, 100, 100, image1)
+    image1.divider()
     with image1:
         image_carousel([
             f"assets/coelhofinance{x:0>2}.png" for x in range(1, 11)
@@ -143,6 +144,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
         "./assets/f1_home.jpg",
         "https://f1analytics.streamlit.app/",
         20, 100, 100, image2)
+    image2.divider()
     with image2:
         image_carousel([
             f"assets/f1analytics{x:0>2}.png" for x in range(1, 11)
@@ -170,6 +172,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
         "./assets/coelho_vision_logo.png",
         "https://coelhovision.streamlit.app/",
         20, 100, 100, image3)
+    image3.divider()
     with image3:
         image_carousel([
             f"assets/coelhovision{x:0>2}.png" for x in range(1, 11)
@@ -208,11 +211,19 @@ with tabs[2]: #TECH STACKS / SKILLS
         tech_cols.container()
         tech_cols2 = tech_cols.container()
         tech_cols1.markdown("<h2><u>Artificial Intelligence / Machine Learning</u></h2>", unsafe_allow_html = True)
-        grid_1 = tech_cols1.columns(6)
+        grid_ = tech_cols1.columns(6)
         tech_stack(
-            grid_1,
+            grid_,
             ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
-            [" NLTK", "Hugging Face Transformers", " ADTK", "Statsmodels", "UMAP"],
+            ["Hugging Face Transformers", " ADTK", "Statsmodels", "UMAP"],
+            tech_images
+        )
+        tech_cols1.markdown("<h2><u>Generative AI - Large Language Models (LLMs)</u></h2>", unsafe_allow_html = True)
+        grid_ = tech_cols1.columns(6)
+        tech_stack(
+            grid_,
+            ["LangChain", "Ollama"],
+            [],
             tech_images
         )
         tech_cols1.markdown("<h2><u>Computer Vision</u></h2>", unsafe_allow_html = True)
@@ -275,7 +286,7 @@ with tabs[2]: #TECH STACKS / SKILLS
         grid_8 = tech_cols2.columns(6)
         tech_stack(
             grid_8,
-            ["Python"], 
+            ["Python", "Bash", "Go"], 
             [],
             tech_images
         )
