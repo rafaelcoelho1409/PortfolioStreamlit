@@ -215,14 +215,14 @@ with tabs[2]: #TECH STACKS / SKILLS
         tech_stack(
             grid_,
             ["TensorFlow", "PyTorch", "Keras", "Scikit Learn", "XGBoost", "Neural Prophet"],
-            ["Hugging Face Transformers", " ADTK", "Statsmodels", "UMAP"],
+            [" ADTK", "Statsmodels", "UMAP"],
             tech_images
         )
         tech_cols1.markdown("<h2><u>Generative AI - Large Language Models (LLMs)</u></h2>", unsafe_allow_html = True)
         grid_ = tech_cols1.columns(6)
         tech_stack(
             grid_,
-            ["LangChain", "Ollama"],
+            ["Hugging Face Transformers", "LangChain", "Ollama"],
             [],
             tech_images
         )
