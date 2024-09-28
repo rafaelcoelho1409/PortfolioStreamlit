@@ -113,6 +113,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
     st.markdown("<h1 style='text-align:center'>Portfolio Projects</h1>",
                 unsafe_allow_html = True)
     st.divider()
+    #--------------------------------------------------------------------
     style1 = grid([1, 0.2, 2])
     image1 = style1.container()
     image_border_radius_url(
@@ -138,6 +139,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
                         and Artificial Intelligence tools and frameworks applied to Financial Market. 
                         For now, the access to the platform is free.</div>""", unsafe_allow_html = True)
     st.divider()
+    #--------------------------------------------------------------------
     style2 = grid([1, 0.2, 2])
     image2 = style2.container()
     image_border_radius_url(
@@ -166,6 +168,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
     Join us at Formula One Analytics for a unique journey into the heart of Formula 1 racing, 
     where data-driven excitement meets the roar of the engines! 🏎️🏁</div>""", unsafe_allow_html = True)
     st.divider()
+    #--------------------------------------------------------------------
     style3 = grid([1, 0.2, 2])
     image3 = style3.container()
     image_border_radius_url(
@@ -192,6 +195,63 @@ with tabs[1]: #PORTFOLIO PROJECTS
     Ideal for developers and tech enthusiasts, COELHO VISION is at the forefront of integrating AI with Computer Vision, providing practical, innovative solutions for digital imagery.
     <br><br>
     <b><i>Discover more with COELHO VISION – where technology meets vision.</i></b></div>""", unsafe_allow_html = True)
+    st.divider()
+    #--------------------------------------------------------------------
+    style4 = grid([1, 0.2, 2])
+    image4 = style4.container()
+    image_border_radius_url(
+        "./assets/pentesting_automation_logo.png",
+        "https://github.com/rafaelcoelho1409/PentestingAutomation/",
+        20, 100, 100, image4)
+    image4.divider()
+    with image4:
+        image_carousel([
+            f"assets/pentestingautomation{x:0>3}.png" for x in range(1, 4)
+        ])
+    style4.container()
+    description4 = style4.container()
+    description4.write("$$\\Huge{\\textbf{Pentesting Automation}}$$")
+    description4.markdown("""<div style='font-size:25px'>
+    <b>Pentesting Automation</b> is a complex pentesting automation which scans
+    more than 20 types of web vulnerabilities in an automated way, saving time
+    from manual work, allowing to focus on tasks which manual and careful analysis
+    is necessary.<br><br>
+    This automation was built with KALI Linux VM, and several Go, Bash
+    and Python tools.""", unsafe_allow_html = True)
+    st.divider()
+    #--------------------------------------------------------------------
+    style5 = grid([1, 0.2, 2])
+    image5 = style5.container()
+    image_border_radius_url(
+        "./assets/coelho_genai_logo.png",
+        "https://github.com/rafaelcoelho1409/COELHOGenAI/",
+        20, 100, 100, image5)
+    image5.divider()
+    with image5:
+        image_carousel([
+            f"assets/coelhogenai{x:0>3}.png" for x in range(0, 5)
+        ])
+    style5.container()
+    description5 = style5.container()
+    description5.write("$$\\Huge{\\textbf{Pentesting Automation}}$$")
+    description5.markdown("""<div style='font-size:25px'>
+    <b>COELHO GenAI</b> is a platform that connects the user to open source 
+    Large Language Models like Llama 3.1 (Meta), Gemma 2 (Google), 
+    Phi 3.5 (Microsoft) and Qwen 2.5 through Ollama, allowing users to have 
+    their own Language Model interface with privacy using the following tools:<br><br>
+    <b>1) Assistant</b><br>
+    Assistant is a simple chatbot that can answer the questions you have 
+    in order to solve problems, have new thoughts and ideas, build new ideas 
+    and so on.<br>
+    <b>2) Information Retrieval</b><br>
+    Information Retrieval connects user local LLM to online tools, such as DuckDuckGo, 
+    Wikipedia, PubMed etc.<br>
+    <b>3) Data Science</b><br>
+    Data Science tool allows user to use autonomous AI agents to explore and 
+    to make data analysis and data science over data the user supplies to LLM.<br>
+    <b>4) Prompt Engineering</b><br>
+    Prompt Engineering is a test tool that allows users to use over 4000 
+    ready prompts coming from LangChain Hub for various tasks.""", unsafe_allow_html = True)
     st.divider()
 
 
@@ -410,6 +470,26 @@ with tabs[3]:
     display = display_grid.container()
     display_grid.container()
     projects_list = [
+"""
+<h2 style='text-align:center'>2024</h2>
+""",
+"""
+<div style='font-size:35px'><b>
+<a href='https://github.com/COELHOGenAI/'>
+COELHO GenAI
+</a><br>
+<p>September 2024</p>
+</b></div>
+""",
+"""
+<div style='font-size:35px'><b>
+<a href='https://github.com/PentestingAutomation/'>
+Pentesting Automation
+</a><br>
+<p>July 2024</p>
+</b></div>
+""",
+#----------------------------------------
     """
 <h2 style='text-align:center'>2023</h2>
 """,
@@ -437,6 +517,7 @@ COELHO Finance
 <p>September 2023</p>
 </b></div><hr>
 """,
+#----------------------------------------
     """
 <h2 style='text-align:center'>2022</h2>
 """,
