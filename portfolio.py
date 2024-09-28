@@ -233,7 +233,7 @@ with tabs[1]: #PORTFOLIO PROJECTS
         ])
     style5.container()
     description5 = style5.container()
-    description5.write("$$\\Huge{\\textbf{Pentesting Automation}}$$")
+    description5.write("$$\\Huge{\\textbf{COELHO GenAI}}$$")
     description5.markdown("""<div style='font-size:25px'>
     <b>COELHO GenAI</b> is a platform that connects the user to open source 
     Large Language Models like Llama 3.1 (Meta), Gemma 2 (Google), 
