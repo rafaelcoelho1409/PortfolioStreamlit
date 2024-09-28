@@ -475,7 +475,7 @@ with tabs[3]:
 """,
 """
 <div style='font-size:35px'><b>
-<a href='https://github.com/COELHOGenAI/'>
+<a href='https://github.com/rafaelcoelho1409/COELHOGenAI/'>
 COELHO GenAI
 </a><br>
 <p>September 2024</p>
@@ -483,7 +483,7 @@ COELHO GenAI
 """,
 """
 <div style='font-size:35px'><b>
-<a href='https://github.com/PentestingAutomation/'>
+<a href='https://github.com/rafaelcoelho1409/PentestingAutomation/'>
 Pentesting Automation
 </a><br>
 <p>July 2024</p>
